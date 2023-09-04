@@ -216,9 +216,21 @@ input {
   margin:10px; /* Ajustez la marge supérieure selon vos préférences */
 }
 
+#confirmation-message:target {
+  display: block;
+  color: white;
+  height: 300px;
+  
+}
+
+/* Cachez le message de confirmation par défaut */
+/* .confirmation-message    {
+  display: none; 
+} */
+
 .checkbox-label,
 .checkbox2-label {
-  position: relative;
+    /* position: relative; */
   margin-left: 36px;
   font-size: 12px;
   font-weight: normal;

@@ -124,10 +124,6 @@ function validate() {
   }
 
   if (errors.length > 0) {
-    // Effacer les messages d'erreur précédents
-    document.querySelectorAll(".error-message").forEach((errorMessage) => {
-      errorMessage.textContent = "";
-    });
 
     // Afficher les messages d'erreur sous les champs correspondants
     if (errors.includes("Le prénom doit contenir au moins 2 caractères.")) {
@@ -165,6 +161,7 @@ function validate() {
   } else {
     // S'il n'y a pas d'erreurs, affiche le message de confirmation
     confirmationDiv.innerHTML = "Formulaire soumis avec succès !";
+
     form.style.display = "none"; // Masquer le formulaire
   }
 }
