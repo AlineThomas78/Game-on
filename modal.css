@@ -212,8 +212,8 @@ input {
 
 .error-message {
   color: red;
-  font-size:1rem; /* Ajustez la taille de la police selon vos préférences */
-  margin:10px; /* Ajustez la marge supérieure selon vos préférences */
+  font-size:1rem; 
+  margin:10px; 
 }
 
 #confirmation-message:target {

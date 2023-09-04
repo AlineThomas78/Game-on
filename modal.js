@@ -103,7 +103,7 @@ function validate() {
     inputCheckbox.classList.remove("error");
   }
 
-  // Parcourez tous les input radio
+  // Parcoure tous les input radio
   for (const radioInput of radioInputs) {
     if (radioInput.checked) {
       isAnyRadioChecked = true;
@@ -111,7 +111,7 @@ function validate() {
     }
   }
 
-  // Vérifiez la variable isAnyRadioChecked
+  // Vérifie la variable isAnyRadioChecked
   if (!isAnyRadioChecked) {
     errors.push("Vous devez choisir une option");
     radioInputs.forEach((radioInput) => {
@@ -162,6 +162,6 @@ function validate() {
     // S'il n'y a pas d'erreurs, affiche le message de confirmation
     confirmationDiv.innerHTML = "Formulaire soumis avec succès !";
 
-    form.style.display = "none"; // Masquer le formulaire
+    form.style.display = "none"; // Masque le formulaire
   }
 }
