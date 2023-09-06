@@ -22,7 +22,10 @@ const radioInputs = document.querySelectorAll('input[name="location"]');
 const inputCheckbox = document.getElementById("checkbox1");
 
 // Sélectionne la div de confirmation
-const confirmationDiv = document.getElementById("confirmation-message");
+const confirmationDiv = document.querySelector(".confirmation-message");
+const closeBtnModal = document.getElementById("close-btn");
+
+
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -41,6 +44,9 @@ function launchModal() {
 function closeModal() {
   modalbg.style.display = "none";
 }
+
+
+closeBtnModal.addEventListener('click', closeModal)
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -160,8 +166,7 @@ function validate() {
     form.style.display = "block";
   } else {
     // S'il n'y a pas d'erreurs, affiche le message de confirmation
-    confirmationDiv.innerHTML = "Formulaire soumis avec succès !";
-
+    confirmationDiv.style.display = "block";
     form.style.display = "none"; // Masque le formulaire
   }
 }

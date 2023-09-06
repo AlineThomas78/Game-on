@@ -204,7 +204,7 @@
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                  Je Je souhaite être prévenu des prochains évènements.
+                   Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
 
@@ -216,10 +216,13 @@
                 value="C'est parti"
               />
             </form>
-            <div id="confirmation-message" class="confirmation-message" >
-              Formulaire soumis avec succès !
+            <!-- Message confirmation apres avoir valider le form -->
+            <div class="confirmation-message">
+              <div class=" modal-body">
+                  <h2>Merci pour votre inscription</h2>
+                  <button class="btn-close" id="close-btn" type="button">Fermer</button>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
