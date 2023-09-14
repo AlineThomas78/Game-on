@@ -181,55 +181,14 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
-  height: 100%;
-  display: flex;
-  
-  align-items: center;
 }
-
-.confirmation-message {
-  display: none;    
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.modal-body h2{
-  text-align: center;
-  font-size: 36px;
-  font-weight: 100;
-  line-height: 50px;
-  font-family: "DMSans-Regular", sans-serif;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.btn {
-  min-width: 17rem;
-  width: 50%;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  padding: 15px 0;
-  font-size: clamp(1.8rem, 2.2vw, 2rem);
-  color: var(--light);
-  background: red;
-  font-family: "DMSans-Medium", sans-serif;
-}
-
-
 
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
-  height: 90%;
 
 }
+
 
 label {
   font-family: var(--font-default);
@@ -237,7 +196,9 @@ label {
   font-weight: normal;
   display: inline-block;
   margin-bottom: 11px;
+  color: white;
 }
+
 input {
   padding: 8px;
   border: 0.8px solid #ccc;
@@ -245,27 +206,51 @@ input {
 }
 .text-control {
   margin: 0;
-  padding: 8px;
+  padding: 8px 0;
   width: 100%;
   border-radius: 8px;
   font-size: 20px;
   height: 48px;
 }
 
-
-.error-message {
-  color: red;
-  font-size:1rem; 
-  margin:10px; 
+.error-message{
+color: red;
+font-size: 17px;
+margin: 10px 0;
 }
 
-#confirmation-message:target {
-  display: block;
+.confirmation-message{
+  display: none;
+}
+
+.confirmation-message-succes{
   color: white;
-  height: 300px;
-  
 }
 
+.formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 0.4em;
+  color: #e54858;
+  display: block;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  /* text-align: right; */
+  line-height: 0.3;
+  opacity: 0;
+  transition: 0.3s;
+}
+.formData[data-error-visible="true"]::after {
+  opacity: 1;
+}
+.formData[data-error-visible="true"] .text-control {
+  border: 2px solid #e54858;
+}
+
+ /* input[data-error] {
+    content: attr(data-error);
+    font-size: 20px;
+    border: 2px solid red;
+}  */
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -356,7 +341,7 @@ input {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup,
+.btn-signup, 
 .btn-close {
   background: #fe142f;
   display: block;
@@ -561,4 +546,3 @@ footer {
     opacity: 1;
   }
 }
-
