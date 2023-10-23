@@ -168,7 +168,7 @@ function validateCheckbox() {
   }
 }
 
-// Fonction de validation d'adresse e-mail simple
+// Fonction de validation d'adresse e-mail 
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);

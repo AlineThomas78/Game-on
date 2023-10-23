@@ -258,11 +258,6 @@ input {
   border: 2px solid #e54858;
 }
 
-/* input[data-error] {
-    content: attr(data-error);
-    font-size: 20px;
-    border: 2px solid red;
-}  */
 .checkbox-label,
 .checkbox2-label {
   position: relative;
